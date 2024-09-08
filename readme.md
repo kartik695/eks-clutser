@@ -1,0 +1,2 @@
+aws_iam_role: Defines and creates an IAM role and its trust policy (who can assume the role). It does not specify what permissions are granted.
+aws_iam_role_policy_attachment: Attaches a specific policy to an IAM role. This grants the permissions defined in the policy to the role.
