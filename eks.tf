@@ -1,5 +1,5 @@
-resource "aws_eks_cluster" "eks-AmazonEKSClusterPolicy" {
-  name     = "eks_cluster"
+resource "aws_eks_cluster" "eks_cluster" {
+  name = "eks_cluster"
   // remember here we are refering complete rle_arn
   // why we are using role_arn instaed of role croos-account-consideration-> suppose you are having too many accounts the ARN helps in resolving ambiguities and ensuring that the correct role is used.
   // Unique Identification: The ARN provides a unique identifier for the IAM role, ensuring that EKS can accurately identify and use the role across different AWS accounts and regions.

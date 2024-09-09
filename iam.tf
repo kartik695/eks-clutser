@@ -33,7 +33,7 @@ aws_iam_role_policy_attachment: Attaches a specific policy to an IAM role. This 
 resource "aws_iam_role_policy_attachment" "eks-AmazonEKSClusterPolicy" {
 
 
-// this resource block is used to attach iam policy to iam role
+  // this resource block is used to attach iam policy to iam role
   policy_arn = "arn:aws:iam::aws:policy/AmazonEKSClusterPolicy"
   // policy arn is the policy amazon resource name it is fixed for each policy.
   role = aws_iam_role.eks_policy.name
