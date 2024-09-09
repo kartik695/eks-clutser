@@ -90,7 +90,6 @@ resource "aws_eks_node_group" "private-nodes" {
 
 
 
-
   ]
 }
 
