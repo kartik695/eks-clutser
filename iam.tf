@@ -2,12 +2,12 @@ resource "aws_iam_role" "eks_policy" {
   name               = "eks-cluster-role-policy"
   assume_role_policy = <<POLICY
 {
- "version" : "2012-10-17",
+ "Version" : "2012-10-17",
  "Statement" : [
   {
   "Effect": "Allow",
   "Principal" : {
-  "Service" : "eks.amazon.com"
+  "Service" : "eks.amazonaws.com"
   },
   "Action" : "sts:AssumeRole"
   }

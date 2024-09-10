@@ -1,18 +1,37 @@
+# resource "aws_iam_role" "nodes-role" {
+#   name = "eks-node-group-nodes"
+
+#   assume_role_policy = jsonencode({
+#     Version = "2012-10-17",
+#     Statement = [{
+#       Action = "sts:AssumeRole",
+#       Effect = "Allow",
+#       Principal = [{
+#         Service = "ec2.amazonaws.com"
+#       }]
+#     }]
+
+#     # version = "2012-10-17"
+#   })
+
+# }
+
+
 resource "aws_iam_role" "nodes-role" {
   name = "eks-node-group-nodes"
 
   assume_role_policy = jsonencode({
-    Statement = [{
-      Action = "sts:Assumerole"
-      Effect = "Allow"
-      Principal = [{
-        Service = "ec2.amazon.com"
-      }]
-    }]
-
-    version = "2012-10-17"
+    Version = "2012-10-17",
+    Statement = [
+      {
+        Action    = "sts:AssumeRole",
+        Effect    = "Allow",
+        Principal = {
+          Service = "ec2.amazonaws.com"
+        }
+      }
+    ]
   })
-
 }
 
 
